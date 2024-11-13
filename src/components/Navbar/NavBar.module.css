@@ -1,0 +1,22 @@
+/* NavBar.module.css */
+
+.navbar {
+  padding: 10px;
+}
+
+.navbarDark {
+  background-color: #212529 !important;
+}
+
+.navbarPrimary {
+  background-color: #007bff !important;
+}
+
+.navbarLightBlue {
+  background-color: #e3f2fd !important;
+}
+
+.navbarBrand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

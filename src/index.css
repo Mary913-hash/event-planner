@@ -1,0 +1,154 @@
+:root {
+  --blue: rgb(39, 123, 189);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.25rem 1rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: var(--blue);
+  color: white;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  font-size: 1.25em;
+  padding-left: 0.5rem;
+  color: transparent;
+  text-shadow: 0 0 0 var(--blue);
+}
+
+main {
+  padding: 0 1rem;
+}
+
+.new-car-form {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  background-color: rgba(181, 211, 250, 0.5);
+}
+
+.new-car-form form {
+  display: flex;
+  justify-content: center;
+}
+
+.new-car-form input {
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.new-car-form button {
+  width: 150px;
+}
+
+.searchbar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input {
+  padding: 0.25rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2em;
+  border-bottom: 2px solid gray;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--blue);
+}
+
+.car-list {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 1rem; /* Add space between cards */
+}
+.cards {
+  list-style: none;
+  display: flex; /* Flexbox to align items in a row */
+  flex-wrap: wrap; /* Allows wrapping of cards if there are too many */
+  justify-content: space-between; /* Distributes cards evenly */
+  gap: 1rem; /* Adds space between cards */
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-basis: calc(33% - 2rem); /* Default width for 3 cards in a row */
+  margin: 0; /* Remove margin because gap is now used */
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-basis: calc(33% - 1rem); /* 3 cards per row on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex-basis: calc(25% - 1rem); /* 4 cards per row on large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex-basis: calc(20% - 1rem); /* 5 cards per row on extra-large screens */
+  }
+}
